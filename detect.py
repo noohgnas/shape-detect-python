@@ -21,7 +21,7 @@ ret,img_binary = cv.threshold(img_gray, 127, 255, cv.THRESH_BINARY_INV|cv.THRESH
 cv.imshow('result', img_binary)
 cv.waitKey(0)
 
-contours, hierarchy = cv.findContours(img_binary, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+_, contours, hierarchy = cv.findContours(img_binary, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
 for cnt in contours:
     size = len(cnt)
